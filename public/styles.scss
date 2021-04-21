@@ -1,0 +1,167 @@
+//===================COLORS VARIABLES==========================//
+//Primary
+$Light-red: hsl(356, 100%, 66%); // (CTA text)
+$Very-light-red: hsl(355, 100%, 74%); // (CTA hover background)
+$Very-dark-blue: hsl(208, 49%, 24%); //(headings)
+
+// Neutral
+
+$White: hsl(0, 0%, 100%); //(text)
+$Grayish-blue: hsl(240, 2%, 79%); //(footer text)
+$Very-dark-grayish-blue: hsl(207, 13%, 34%); // (body copy)
+$Very-dark-black-blue: hsl(240, 10%, 16%); //(footer background)
+
+//@use ; gradient - Intro/CTA mobile nav:
+
+$Very-light-red: hsl(13, 100%, 72%);
+$Light-red: hsl(353, 100%, 62%);
+
+//Background gradient - body:
+
+$Very-dark-gray-blue: hsl(237, 17%, 21%);
+$Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+///============FONTS==================================//
+
+//fontweight
+
+$font-weight: (
+	"Light": 300,
+	"Regular": 400,
+	"Medium": 500,
+	"Semi-bold": 600,
+	"Bold": 700,
+);
+
+heading {
+	font-family: "Overpass", sans-serif;
+}
+
+body {
+	font-family: "Ubuntu", sans-serif;
+	font-size: 16px;
+}
+
+//=====================RESET HTML===========================//
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+//======================HEADER===============================//
+
+header {
+	background-color: $Light-red;
+	border-bottom-left-radius: 70px;
+	padding: 2rem 8rem;
+	color: $White;
+	nav {
+		display: flex;
+		flex-direction: row;
+		font-size: 14px;
+		font-weight: map-get($font-weight, Semi-bold);
+		.logo {
+			opacity: 0.9;
+			font-size: 1.2rem;
+		}
+		.menu {
+			display: flex;
+			flex-direction: row;
+			margin: 5px auto 0 5rem;
+			.menu-item {
+				margin-right: 2rem;
+				.menu-head {
+					display: flex;
+					flex-direction: row;
+					opacity: 0.7;
+					ion-icon {
+						margin-top: 3px;
+						margin-left: 5px;
+					}
+				}
+			}
+			article {
+				display: none;
+			}
+		}
+		.cta {
+			display: flex;
+			flex-direction: inherit;
+			.login {
+				margin-top: 8px;
+				margin-right: 25px;
+				opacity: 0.9;
+			}
+			.sign-up {
+				border-radius: 28px;
+				color: $Light-red;
+				background: $White;
+				padding: 8px 25px;
+			}
+		}
+	}
+}
+
+.header-content {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h1 {
+		font-size: 60px;
+		font-weight: map-get($font-weight, bold);
+		font-family: "overpass";
+		opacity: 0.85;
+	}
+	p {
+		margin: 20px 0;
+		font-size: 18px;
+		opacity: 0.85;
+	}
+	.start {
+		display: inline-block;
+		border-radius: 28px;
+		color: $Light-red;
+		background: $White;
+		padding: 12px 15px;
+		border: none;
+		font-family: inherit;
+		font-weight: map-get($font-weight, Semi-bold);
+		margin-right: 10px;
+	}
+	.more {
+		display: inline-block;
+		border-radius: 28px;
+		padding: 10px 15px;
+		border: 1px solid $White;
+		color: $White;
+		font-family: inherit;
+		font-weight: map-get($font-weight, Semi-bold);
+		background: transparent;
+	}
+}

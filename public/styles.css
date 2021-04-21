@@ -1,0 +1,171 @@
+heading {
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+header {
+  background-color: #ff3d54;
+  border-bottom-left-radius: 70px;
+  padding: 2rem 8rem;
+  color: white;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+header nav .logo {
+  opacity: 0.9;
+  font-size: 1.2rem;
+}
+
+header nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 5px auto 0 5rem;
+}
+
+header nav .menu .menu-item {
+  margin-right: 2rem;
+}
+
+header nav .menu .menu-item .menu-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  opacity: 0.7;
+}
+
+header nav .menu .menu-item .menu-head ion-icon {
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+header nav .menu article {
+  display: none;
+}
+
+header nav .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
+}
+
+header nav .cta .login {
+  margin-top: 8px;
+  margin-right: 25px;
+  opacity: 0.9;
+}
+
+header nav .cta .sign-up {
+  border-radius: 28px;
+  color: #ff3d54;
+  background: white;
+  padding: 8px 25px;
+}
+
+.header-content {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-content h1 {
+  font-size: 60px;
+  font-family: "overpass";
+  opacity: 0.85;
+}
+
+.header-content p {
+  margin: 20px 0;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+.header-content .start {
+  display: inline-block;
+  border-radius: 28px;
+  color: #ff3d54;
+  background: white;
+  padding: 12px 15px;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.header-content .more {
+  display: inline-block;
+  border-radius: 28px;
+  padding: 10px 15px;
+  border: 1px solid white;
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  background: transparent;
+}
+/*# sourceMappingURL=styles.css.map */
