@@ -40,8 +40,13 @@ a {
 
 header {
   background-color: #ff3d54;
+<<<<<<< HEAD
   border-bottom-left-radius: 70px;
   padding: 2rem 8rem;
+=======
+  border-bottom-left-radius: 80px;
+  padding: 2rem 6rem;
+>>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
   color: white;
 }
 
@@ -53,6 +58,7 @@ header nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+<<<<<<< HEAD
   font-size: 14px;
   font-weight: 600;
 }
@@ -60,6 +66,11 @@ header nav {
 header nav .logo {
   opacity: 0.9;
   font-size: 1.2rem;
+=======
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+>>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 }
 
 header nav .menu {
@@ -70,6 +81,7 @@ header nav .menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+<<<<<<< HEAD
   margin: 5px auto 0 5rem;
 }
 
@@ -91,11 +103,14 @@ header nav .menu .menu-item .menu-head {
 header nav .menu .menu-item .menu-head ion-icon {
   margin-top: 3px;
   margin-left: 5px;
+=======
+>>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 }
 
 header nav .menu article {
   display: none;
 }
+<<<<<<< HEAD
 
 header nav .cta {
   display: -webkit-box;
@@ -168,4 +183,6 @@ header nav .cta .sign-up {
   font-weight: 600;
   background: transparent;
 }
+=======
+>>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 /*# sourceMappingURL=styles.css.map */

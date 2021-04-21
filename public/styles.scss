@@ -27,9 +27,15 @@ $Very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
 $font-weight: (
 	"Light": 300,
+<<<<<<< HEAD
 	"Regular": 400,
 	"Medium": 500,
 	"Semi-bold": 600,
+=======
+	"Semi-bold": 600,
+	"Regular": 400,
+	"Medium": 500,
+>>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 	"Bold": 700,
 );
 
@@ -77,6 +83,7 @@ a {
 
 header {
 	background-color: $Light-red;
+<<<<<<< HEAD
 	border-bottom-left-radius: 70px;
 	padding: 2rem 8rem;
 	color: $White;
@@ -105,10 +112,23 @@ header {
 					}
 				}
 			}
+=======
+	border-bottom-left-radius: 80px;
+	padding: 2rem 6rem;
+	color: white;
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.menu {
+			display: flex;
+			flex-direction: row;
+>>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 			article {
 				display: none;
 			}
 		}
+<<<<<<< HEAD
 		.cta {
 			display: flex;
 			flex-direction: inherit;
@@ -163,5 +183,7 @@ header {
 		font-family: inherit;
 		font-weight: map-get($font-weight, Semi-bold);
 		background: transparent;
+=======
+>>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 	}
 }
