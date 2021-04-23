@@ -27,15 +27,9 @@ $Very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
 $font-weight: (
 	"Light": 300,
-<<<<<<< HEAD
 	"Regular": 400,
 	"Medium": 500,
 	"Semi-bold": 600,
-=======
-	"Semi-bold": 600,
-	"Regular": 400,
-	"Medium": 500,
->>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 	"Bold": 700,
 );
 
@@ -48,6 +42,10 @@ body {
 	font-size: 16px;
 }
 
+@mixin flexrow {
+	display: flex;
+	flex-direction: row;
+}
 //=====================RESET HTML===========================//
 *,
 ::before,
@@ -83,8 +81,7 @@ a {
 
 header {
 	background-color: $Light-red;
-<<<<<<< HEAD
-	border-bottom-left-radius: 70px;
+	border-bottom-left-radius: 80px;
 	padding: 2rem 8rem;
 	color: $White;
 	nav {
@@ -102,36 +99,43 @@ header {
 			margin: 5px auto 0 5rem;
 			.menu-item {
 				margin-right: 2rem;
+				cursor: pointer;
 				.menu-head {
 					display: flex;
 					flex-direction: row;
 					opacity: 0.7;
+					&:hover {
+						opacity: 1;
+					}
 					ion-icon {
 						margin-top: 3px;
 						margin-left: 5px;
 					}
 				}
 			}
-=======
-	border-bottom-left-radius: 80px;
-	padding: 2rem 6rem;
-	color: white;
-	nav {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		.menu {
-			display: flex;
-			flex-direction: row;
->>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 			article {
 				display: none;
+				background: $White;
+				color: black;
+				margin-top: 20px;
+				padding: 20px 20px;
+				border-radius: 5px;
+				li {
+					margin-bottom: 10px;
+					opacity: 0.7;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+			.display {
+				display: inline-block;
 			}
 		}
-<<<<<<< HEAD
 		.cta {
 			display: flex;
 			flex-direction: inherit;
+			cursor: pointer;
 			.login {
 				margin-top: 8px;
 				margin-right: 25px;
@@ -142,6 +146,12 @@ header {
 				color: $Light-red;
 				background: $White;
 				padding: 8px 25px;
+				width: 101px;
+				height: 35px;
+				&:hover {
+					background: $Very-light-red;
+					color: $White;
+				}
 			}
 		}
 	}
@@ -173,6 +183,11 @@ header {
 		font-family: inherit;
 		font-weight: map-get($font-weight, Semi-bold);
 		margin-right: 10px;
+		cursor: pointer;
+		&:hover {
+			background: $Very-light-red;
+			color: $White;
+		}
 	}
 	.more {
 		display: inline-block;
@@ -183,7 +198,128 @@ header {
 		font-family: inherit;
 		font-weight: map-get($font-weight, Semi-bold);
 		background: transparent;
-=======
->>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
+		&:hover {
+			background: $White;
+			color: $Light-red;
+		}
+	}
+}
+
+// ===============MAIN====================
+
+main {
+	overflow: hidden;
+	.first-section {
+		padding: 7rem 8rem 0;
+	}
+	.section-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $Very-dark-blue;
+		font-size: 20px;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+
+		div > div {
+			margin: 70px auto;
+			width: 500px;
+			h5 {
+				color: $Very-dark-blue;
+				font-size: 15px;
+				margin-bottom: 20px;
+			}
+			p {
+				line-height: 1.5;
+				opacity: 0.9;
+			}
+		}
+		.diagram1 {
+			position: relative;
+			top: -90px;
+			right: -200px;
+			overflow: hidden;
+		}
+	}
+}
+
+// ===========section2================
+
+.section2 {
+	background-color: $Very-dark-desaturated-blue;
+	width: 100vw;
+	height: 300px;
+	border-radius: 0 80px 0 80px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	color: $White;
+	.content2 {
+		margin: 70px auto;
+		.title {
+			width: 100%;
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+		p {
+			padding-right: 150px;
+			line-height: 1.5;
+			opacity: 0.9;
+		}
+	}
+	.diagram2 {
+		position: relative;
+		margin-left: 170px;
+		margin-top: -40px;
+	}
+}
+
+// =============SECTION 3====================
+
+.section3 {
+	padding: 5rem 8rem 1rem 0;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	justify-content: flex-start;
+	align-items: center;
+	// border: 1px solid black;
+	.diagram3 {
+		position: relative;
+		left: -150px;
+		// border: 1px solid black;
+	}
+	.section3-content {
+		margin-left: -80px;
+		width: 500px;
+		// border: 1px solid black;
+		h5 {
+			color: $Very-dark-blue;
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+		p {
+			line-height: 1.5;
+			opacity: 0.9;
+		}
+		.content3 {
+			margin-top: 5rem;
+		}
+	}
+}
+
+// ===============FOOTER==================
+
+footer {
+	background-color: $Very-dark-black-blue;
+	border-radius: 0 80px 0 0;
+	.footer-content {
+		display: flex;
+		@include flexrow();
+		padding: 10px;
+		justify-content: space-around;
+		color: $Grayish-blue;
 	}
 }

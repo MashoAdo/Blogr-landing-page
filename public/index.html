@@ -10,8 +10,12 @@
 
   <!--=================STYLE SHEET======================== -->
   <link rel="stylesheet" href="./styles.css">
+
   <!--====================== FONT AWESOME================= -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <!-- =====================ION ICONS======================== -->
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
     rel="stylesheet">
@@ -31,17 +35,18 @@
         <div class="menu-item">
 
           <div class="menu-head">
-            <p>Product</p>
-            <ion-icon name="chevron-down-outline"></ion-icon>
+            <p id="nav-header">Product</p>
+            <ion-icon name="chevron-down-outline" class="arrow"></ion-icon>
           </div>
 
-          <article>
+          <article class="dropdown-content">
             <ul>
-              <li>Overview</li>
-              <li>Pricing</li>
-              <li>Marketplace</li>
-              <li>Features</li>
-              <li>Integrations</li>
+              <li><a href="#"></a>Overview </li>
+              <li><a href="#"></a>Pricing</li>
+              <li><a href="#"></a>Marketplace</li>
+              <li><a href="#"></a>Features</li>
+              <li><a href="#"></a>Integrations</li>
+
             </ul>
           </article>
 
@@ -50,16 +55,17 @@
         <div class="menu-item">
 
           <div class="menu-head">
-            <p>Company</p>
-            <ion-icon name="chevron-down-outline"></ion-icon>
+            <p id="nav-header">Company</p>
+            <ion-icon name="chevron-down-outline" class="arrow"></ion-icon>
           </div>
 
-          <article>
+          <article class="dropdown-content">
             <ul>
-              <li>About</li>
-              <li>Team</li>
-              <li>Blog</li>
-              <li>Careers</li>
+              <li><a href="#"></a>About</li>
+              <li><a href="#"></a>Team</li>
+              <li><a href="#"></a>Blog</li>
+              <li><a href="#"></a>Careers</li>
+
             </ul>
           </article>
 
@@ -68,15 +74,16 @@
         <div class="menu-item">
 
           <div class="menu-head">
-            <p>Connect</p>
-            <ion-icon name="chevron-down-outline"></ion-icon>
+            <p id="nav-header">Connect</p>
+            <ion-icon name="chevron-down-outline" class="arrow"></ion-icon>
           </div>
 
-          <article>
+          <article class="dropdown-content">
             <ul>
-              <li>Contact</li>
-              <li>Newsletter</li>
-              <li>LinkedIn</li>
+              <li><a href="#"></a>Conatact</li>
+              <li><a href="#"></a>Newsletter</li>
+              <li><a href="#"></a>LinkedIn</li>
+
             </ul>
           </article>
 
@@ -110,117 +117,130 @@
   </header>
 
   <main>
-    <section>
-      <h3> Designed for the future</h3>
-      <div>
-        <div>
-          <h5>Introducing an extensible editor</h5>
-          <p>
-            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
-            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
-            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
-            change the looks of a blog.
-          </p>
-        </div>
-
-        <div>
-          <h5>Robust content management</h5>
-          <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog
-            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-          </p>
-        </div>
-        <div class="diagram1"></div>
+    <section class="first-section">
+      <div class="section-title">
+        <h3> Designed for the future</h3>
       </div>
-      <div class="line-circles"></div>
+      <div class="content">
+        <div>
+          <div>
+            <h5>Introducing an extensible editor</h5>
+            <p>
+              Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+          </div>
+
+          <div>
+            <h5>Robust content management</h5>
+            <p>Flexible content management enables users to easily move through posts. Increase the usability of your
+              blog
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full
+              control.
+            </p>
+          </div>
+        </div>
+        <div class="diagram1"><img src="../images/illustration-editor-desktop.svg" alt="illustration-image" svg
+            width="700px" height="700px" viewBox="0 0 54 54" version="1.1"></div>
+      </div>
+
     </section>
 
-    <section>
-      <img src="" alt="">
-      <img src="" alt="">
+    <section class="section2">
 
-      <div>
-        <h3> State of the Art Infrastructure</h3>
+      <div class="diagram2"><img src="../images/illustration-phones.svg" alt="illustration-phones" svg width="400px"
+          height="400px" viewBox="0 0 54 54" version="1.1"> </div>
+
+      <div class="content2">
+        <div class="title">
+          <h3> State of the Art Infrastructure</h3>
+        </div>
         <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
           This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
         </p>
       </div>
     </section>
 
-    <section>
-      <div>
-        <img src="" alt="">
-        <div>
-          <div>
-            <h5>Free, open, simple</h5>
-            <p> Blogr is a free and open source application backed by a large community of helpful developers. It
-              supports
-              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
-              tools,
-              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
-          </div>
+    <section class="section3">
 
-          <div>
-            <h5> Powerful tooling</h5>
-            <p>
-              Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment
-              a
-              breeze,
-              but
-              capable of producing even the most complicated sites.
-            </p>
-          </div>
+      <div class="diagram3"><img src="../images/illustration-laptop-desktop.svg" alt="illustration-laptop-desktop" svg
+          width="700px" height="600px" viewBox="0 0 54 54" version="1.1">
+      </div>
+      <div class="section3-content">
+        <div>
+          <h5>Free, open, simple</h5>
+          <p> Blogr is a free and open source application backed by a large community of helpful developers. It
+            supports
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+            tools,
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+        </div>
+
+        <div class="content3">
+          <h5> Powerful tooling</h5>
+          <p>
+            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment
+            a
+            breeze,
+            but
+            capable of producing even the most complicated sites.
+          </p>
         </div>
       </div>
-      <div class="line-circles"></div>
+
+
     </section>
   </main>
 
 
   <footer>
-    <div class="footer-logo">
-      Blogr
+    <div class="footer-content">
+      <div class="footer-logo">
+        Blogr
+      </div>
+
+      <div>
+        <p> Product</p>
+
+        <ul>
+          <li>Overview</li>
+          <li>Pricing</li>
+          <li>Marketplace</li>
+          <li>Features</li>
+          <li>Integrations</li>
+        </ul>
+      </div>
+
+      <div>
+        <p> Company</p>
+
+        <ul>
+          <li>About</li>
+          <li>Team</li>
+          <li>Blog</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+
+      <div>
+        <p> Connect</p>
+
+        <ul>
+          <li>Contact</li>
+          <li>Newsletter</li>
+          <li>LinkedIn</li>
+        </ul>
+      </div>
     </div>
-
-    <div>
-      <p> Product</p>
-
-      <ul>
-        <li>Overview</li>
-        <li>Pricing</li>
-        <li>Marketplace</li>
-        <li>Features</li>
-        <li>Integrations</li>
-      </ul>
-    </div>
-
-    <div>
-      <p> Company</p>
-
-      <ul>
-        <li>About</li>
-        <li>Team</li>
-        <li>Blog</li>
-        <li>Careers</li>
-      </ul>
-    </div>
-
-    <div>
-      <p> Connect</p>
-
-      <ul>
-        <li>Contact</li>
-        <li>Newsletter</li>
-        <li>LinkedIn</li>
-      </ul>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Masho Ado</a>.
     </div>
   </footer>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  <!-- ==============ION ICONS================= -->
-  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
 
   <!-- ================INDEX.JS===================== -->
   <script src="./index.js"></script>

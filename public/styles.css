@@ -40,13 +40,8 @@ a {
 
 header {
   background-color: #ff3d54;
-<<<<<<< HEAD
-  border-bottom-left-radius: 70px;
-  padding: 2rem 8rem;
-=======
   border-bottom-left-radius: 80px;
-  padding: 2rem 6rem;
->>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
+  padding: 2rem 8rem;
   color: white;
 }
 
@@ -58,7 +53,6 @@ header nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-<<<<<<< HEAD
   font-size: 14px;
   font-weight: 600;
 }
@@ -66,11 +60,6 @@ header nav {
 header nav .logo {
   opacity: 0.9;
   font-size: 1.2rem;
-=======
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
->>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 }
 
 header nav .menu {
@@ -81,12 +70,12 @@ header nav .menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-<<<<<<< HEAD
   margin: 5px auto 0 5rem;
 }
 
 header nav .menu .menu-item {
   margin-right: 2rem;
+  cursor: pointer;
 }
 
 header nav .menu .menu-item .menu-head {
@@ -100,17 +89,36 @@ header nav .menu .menu-item .menu-head {
   opacity: 0.7;
 }
 
+header nav .menu .menu-item .menu-head:hover {
+  opacity: 1;
+}
+
 header nav .menu .menu-item .menu-head ion-icon {
   margin-top: 3px;
   margin-left: 5px;
-=======
->>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
 }
 
 header nav .menu article {
   display: none;
+  background: white;
+  color: black;
+  margin-top: 20px;
+  padding: 20px 20px;
+  border-radius: 5px;
 }
-<<<<<<< HEAD
+
+header nav .menu article li {
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+header nav .menu article li:hover {
+  opacity: 1;
+}
+
+header nav .menu .display {
+  display: inline-block;
+}
 
 header nav .cta {
   display: -webkit-box;
@@ -120,6 +128,7 @@ header nav .cta {
   -webkit-box-direction: inherit;
       -ms-flex-direction: inherit;
           flex-direction: inherit;
+  cursor: pointer;
 }
 
 header nav .cta .login {
@@ -133,6 +142,13 @@ header nav .cta .sign-up {
   color: #ff3d54;
   background: white;
   padding: 8px 25px;
+  width: 101px;
+  height: 35px;
+}
+
+header nav .cta .sign-up:hover {
+  background: #ff8f70;
+  color: white;
 }
 
 .header-content {
@@ -171,6 +187,12 @@ header nav .cta .sign-up {
   font-family: inherit;
   font-weight: 600;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.header-content .start:hover {
+  background: #ff8f70;
+  color: white;
 }
 
 .header-content .more {
@@ -183,6 +205,161 @@ header nav .cta .sign-up {
   font-weight: 600;
   background: transparent;
 }
-=======
->>>>>>> ae8e863ec47b2ba1ef3ddc4a4a07baed33672ce9
+
+.header-content .more:hover {
+  background: white;
+  color: #ff3d54;
+}
+
+main {
+  overflow: hidden;
+}
+
+main .first-section {
+  padding: 7rem 8rem 0;
+}
+
+main .section-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1f3f5b;
+  font-size: 20px;
+}
+
+main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .content div > div {
+  margin: 70px auto;
+  width: 500px;
+}
+
+main .content div > div h5 {
+  color: #1f3f5b;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+main .content div > div p {
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+main .content .diagram1 {
+  position: relative;
+  top: -90px;
+  right: -200px;
+  overflow: hidden;
+}
+
+.section2 {
+  background-color: #3f4164;
+  width: 100vw;
+  height: 300px;
+  border-radius: 0 80px 0 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  color: white;
+}
+
+.section2 .content2 {
+  margin: 70px auto;
+}
+
+.section2 .content2 .title {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.section2 .content2 p {
+  padding-right: 150px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.section2 .diagram2 {
+  position: relative;
+  margin-left: 170px;
+  margin-top: -40px;
+}
+
+.section3 {
+  padding: 5rem 8rem 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section3 .diagram3 {
+  position: relative;
+  left: -150px;
+}
+
+.section3 .section3-content {
+  margin-left: -80px;
+  width: 500px;
+}
+
+.section3 .section3-content h5 {
+  color: #1f3f5b;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.section3 .section3-content p {
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.section3 .section3-content .content3 {
+  margin-top: 5rem;
+}
+
+footer {
+  background-color: #25252d;
+  border-radius: 0 80px 0 0;
+}
+
+footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #c8c8cb;
+}
 /*# sourceMappingURL=styles.css.map */
