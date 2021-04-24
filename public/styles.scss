@@ -318,8 +318,24 @@ footer {
 	.footer-content {
 		display: flex;
 		@include flexrow();
-		padding: 10px;
+		padding: 4rem 8rem;
 		justify-content: space-around;
-		color: $Grayish-blue;
+	}
+	.footer-logo {
+		color: $White;
+		font-weight: map-get($font-weight, Medium);
+		font-size: 30px;
+	}
+	.content-items {
+		p {
+			margin-bottom: 1.5rem;
+			color: $White;
+		}
+		li {
+			margin: 15px auto;
+			font-size: 13px;
+			cursor: pointer;
+			color: $Grayish-blue;
+		}
 	}
 }

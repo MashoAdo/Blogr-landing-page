@@ -357,9 +357,26 @@ footer .footer-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 10px;
+  padding: 4rem 8rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+footer .footer-logo {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+footer .content-items p {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+footer .content-items li {
+  margin: 15px auto;
+  font-size: 13px;
+  cursor: pointer;
   color: #c8c8cb;
 }
 /*# sourceMappingURL=styles.css.map */
