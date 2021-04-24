@@ -29,20 +29,13 @@ a {
   text-decoration: none;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
-}
-
 header {
   background-color: #ff3d54;
   border-bottom-left-radius: 80px;
   padding: 2rem 8rem;
   color: white;
+  height: 500px;
+  overflow: hidden;
 }
 
 header nav {
@@ -60,6 +53,8 @@ header nav {
 header nav .logo {
   opacity: 0.9;
   font-size: 1.2rem;
+  z-index: 1;
+  cursor: pointer;
 }
 
 header nav .menu {
@@ -76,6 +71,7 @@ header nav .menu {
 header nav .menu .menu-item {
   margin-right: 2rem;
   cursor: pointer;
+  z-index: 1;
 }
 
 header nav .menu .menu-item .menu-head {
@@ -129,6 +125,7 @@ header nav .cta {
       -ms-flex-direction: inherit;
           flex-direction: inherit;
   cursor: pointer;
+  z-index: 1;
 }
 
 header nav .cta .login {
@@ -151,6 +148,13 @@ header nav .cta .sign-up:hover {
   color: white;
 }
 
+header .background-image {
+  position: relative;
+  top: -1050px;
+  left: -400px;
+  background-size: 100%;
+}
+
 .header-content {
   margin-top: 100px;
   display: -webkit-box;
@@ -163,9 +167,11 @@ header nav .cta .sign-up:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1;
 }
 
 .header-content h1 {
+  z-index: 1;
   font-size: 60px;
   font-family: "overpass";
   opacity: 0.85;
@@ -175,6 +181,11 @@ header nav .cta .sign-up:hover {
   margin: 20px 0;
   font-size: 18px;
   opacity: 0.85;
+  z-index: 1;
+}
+
+.header-content .cta2 {
+  z-index: 1;
 }
 
 .header-content .start {
@@ -199,7 +210,7 @@ header nav .cta .sign-up:hover {
   display: inline-block;
   border-radius: 28px;
   padding: 10px 15px;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   font-family: inherit;
   font-weight: 600;
@@ -215,8 +226,9 @@ main {
   overflow: hidden;
 }
 
-main .first-section {
+main .section1 {
   padding: 7rem 8rem 0;
+  z-index: 1;
 }
 
 main .section-title {
@@ -267,7 +279,7 @@ main .content .diagram1 {
 }
 
 .section2 {
-  background-color: #3f4164;
+  background-color: #2c2d3f;
   width: 100vw;
   height: 300px;
   border-radius: 0 80px 0 80px;
@@ -276,10 +288,12 @@ main .content .diagram1 {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   color: white;
+  overflow: hidden;
 }
 
 .section2 .content2 {
   margin: 70px auto;
+  z-index: 1;
 }
 
 .section2 .content2 .title {
@@ -296,8 +310,15 @@ main .content .diagram1 {
 
 .section2 .diagram2 {
   position: relative;
-  margin-left: 170px;
-  margin-top: -40px;
+  left: 200px;
+  top: -11px;
+  z-index: 1;
+}
+
+.section2 .background-image2 {
+  position: relative;
+  top: -800px;
+  left: -200px;
 }
 
 .section3 {
@@ -316,6 +337,7 @@ main .content .diagram1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1;
 }
 
 .section3 .diagram3 {
