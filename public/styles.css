@@ -5,6 +5,7 @@ heading {
 body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 *,
@@ -51,8 +52,7 @@ header nav {
 }
 
 header nav .logo {
-  opacity: 0.9;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   z-index: 1;
   cursor: pointer;
 }
@@ -174,7 +174,6 @@ header .background-image {
   z-index: 1;
   font-size: 60px;
   font-family: "overpass";
-  opacity: 0.85;
 }
 
 .header-content p {
@@ -222,10 +221,6 @@ header .background-image {
   color: #ff3d54;
 }
 
-main {
-  overflow: hidden;
-}
-
 main .section1 {
   padding: 7rem 8rem 0;
   z-index: 1;
@@ -245,7 +240,7 @@ main .section-title {
   font-size: 20px;
 }
 
-main .content {
+main .section1-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,99 +250,39 @@ main .content {
           flex-direction: row;
 }
 
-main .content div > div {
+main .section1-content div > div {
   margin: 70px auto;
-  width: 500px;
+  max-width: 500px;
 }
 
-main .content div > div h5 {
+main .section1-content div > div h5 {
   color: #1f3f5b;
   font-size: 15px;
   margin-bottom: 20px;
 }
 
-main .content div > div p {
+main .section1-content div > div p {
   line-height: 1.5;
   opacity: 0.9;
 }
 
-main .content .diagram1 {
+main .section1-content .diagram1 {
   position: relative;
   top: -90px;
   right: -200px;
   overflow: hidden;
 }
 
-.section2 {
-  background-color: #2c2d3f;
-  width: 100vw;
-  height: 300px;
-  border-radius: 0 80px 0 80px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  color: white;
-  overflow: hidden;
-}
-
-.section2 .content2 {
-  margin: 70px auto;
-  z-index: 1;
-}
-
-.section2 .content2 .title {
-  width: 100%;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.section2 .content2 p {
-  padding-right: 150px;
-  line-height: 1.5;
-  opacity: 0.9;
-}
-
-.section2 .diagram2 {
-  position: relative;
-  left: 200px;
-  top: -11px;
-  z-index: 1;
-}
-
-.section2 .background-image2 {
-  position: relative;
-  top: -800px;
-  left: -200px;
-}
-
 .section3 {
-  padding: 5rem 8rem 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   overflow: hidden;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   z-index: 1;
 }
 
 .section3 .diagram3 {
   position: relative;
-  left: -150px;
-}
-
-.section3 .section3-content {
-  margin-left: -80px;
-  width: 500px;
 }
 
 .section3 .section3-content h5 {
@@ -368,9 +303,6 @@ main .content .diagram1 {
 footer {
   background-color: #25252d;
   border-radius: 0 80px 0 0;
-}
-
-footer .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,8 +312,17 @@ footer .footer-content {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 4rem 8rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: -70px;
 }
 
 footer .footer-logo {
@@ -390,15 +331,224 @@ footer .footer-logo {
   font-size: 30px;
 }
 
+footer .content-items {
+  margin-left: 10rem;
+}
+
 footer .content-items p {
   margin-bottom: 1.5rem;
   color: white;
 }
 
-footer .content-items li {
-  margin: 15px auto;
-  font-size: 13px;
+footer .content-items ul {
   cursor: pointer;
+}
+
+footer .content-items li {
+  margin: 25px auto;
+  font-size: 13px;
   color: #c8c8cb;
+}
+
+@media screen and (max-width: 728px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    padding: 4rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 600px;
+    overflow: hidden;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    z-index: 1;
+  }
+  header .menu-icon {
+    margin-left: 19.0005rem;
+  }
+  header .menu-icon ion-icon {
+    font-size: 40px;
+  }
+  header .menu-item,
+  header .login,
+  header .sign-up {
+    display: none;
+  }
+  header .header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  header .header-content h1 {
+    font-size: 40px;
+  }
+  header .header-content h1 span::before {
+    content: "\A";
+    white-space: pre;
+  }
+  header .header-content p {
+    margin-bottom: 3rem;
+  }
+  header .header-content p span::before {
+    content: "\A";
+    white-space: pre;
+  }
+  header .header-content .cta2 {
+    margin-bottom: 4rem;
+  }
+  .section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 4rem 2rem;
+    margin-bottom: 8rem;
+  }
+  .section1 h3 {
+    font-size: 19px;
+  }
+  .section1 .content-item {
+    width: 20rem;
+    text-align: center;
+    z-index: 2;
+  }
+  .section1 .diagram1 {
+    display: none;
+  }
+  .section2 {
+    background-color: #2c2d3f;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 800px;
+    border-radius: 0 80px 0 80px;
+    color: white;
+    position: relative;
+  }
+  .section2 .content2 {
+    position: relative;
+    bottom: 2px;
+    text-align: center;
+    line-height: 2;
+    padding: 2rem 4rem;
+    z-index: 1;
+  }
+  .section2 .diagram2 {
+    position: relative;
+    left: 30px;
+    top: -150px;
+    z-index: 1;
+  }
+  .section2 .background-image2 {
+    position: relative;
+    top: -350px;
+    left: -200px;
+  }
+  .hide-overflow {
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    border-top-right-radius: 105px;
+    position: absolute;
+    top: 0;
+  }
+  .section3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section3-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2rem 4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    margin-bottom: 4rem;
+  }
+  .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content-items {
+    margin-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -40,6 +40,7 @@ heading {
 body {
 	font-family: "Ubuntu", sans-serif;
 	font-size: 16px;
+	overflow-x: hidden;
 }
 
 @mixin flexrow {
@@ -85,8 +86,8 @@ header {
 		font-weight: map-get($font-weight, Semi-bold);
 
 		.logo {
-			opacity: 0.9;
-			font-size: 1.2rem;
+			font-size: 1.5rem;
+			// font-weight: map-get($font-weight, Light);
 			z-index: 1;
 			cursor: pointer;
 		}
@@ -174,7 +175,6 @@ header {
 		font-size: 60px;
 		font-weight: map-get($font-weight, bold);
 		font-family: "overpass";
-		opacity: 0.85;
 	}
 	p {
 		margin: 20px 0;
@@ -222,7 +222,8 @@ header {
 // ===============MAIN====================
 
 main {
-	overflow: hidden;
+	// overflow: hidden;
+	// ===================SECTION 1=======================
 	.section1 {
 		padding: 7rem 8rem 0;
 		z-index: 1;
@@ -235,13 +236,13 @@ main {
 		font-size: 20px;
 	}
 
-	.content {
+	.section1-content {
 		display: flex;
 		flex-direction: row;
 
 		div > div {
 			margin: 70px auto;
-			width: 500px;
+			max-width: 500px;
 			h5 {
 				color: $Very-dark-blue;
 				font-size: 15px;
@@ -263,61 +264,60 @@ main {
 
 // ===========section2================
 
-.section2 {
-	background-color: $Very-dark-gray-blue;
-	width: 100vw;
-	height: 300px;
-	border-radius: 0 80px 0 80px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	color: $White;
-	overflow: hidden;
-	.content2 {
-		margin: 70px auto;
-		z-index: 1;
-		.title {
-			width: 100%;
-			margin-bottom: 20px;
-			font-size: 20px;
-		}
-		p {
-			padding-right: 150px;
-			line-height: 1.5;
-			opacity: 0.9;
-		}
-	}
-	.diagram2 {
-		position: relative;
-		left: 200px;
-		top: -11px;
-		z-index: 1;
-	}
-	.background-image2 {
-		position: relative;
-		top: -800px;
-		left: -200px;
-	}
-}
+// .section2 {
+// 	background-color: $Very-dark-gray-blue;
+// 	width: 100vw;
+// 	height: 300px;
+// 	border-radius: 0 80px 0 80px;
+// 	display: grid;
+// 	grid-template-columns: repeat(2, 1fr);
+// 	color: $White;
+// 	overflow: hidden;
+// 	.content2 {
+// 		margin: 70px auto;
+// 		z-index: 1;
+// 		.title {
+// 			width: 100%;
+// 			margin-bottom: 20px;
+// 			font-size: 20px;
+// 		}
+// 		p {
+// 			padding-right: 150px;
+// 			line-height: 1.5;
+// 			opacity: 0.9;
+// 		}
+// 	}
+// 	.diagram2 {
+// 		position: relative;
+// 		left: 200px;
+// 		top: -11px;
+// 		z-index: 1;
+// 	}
+// 	.background-image2 {
+// 		position: relative;
+// 		top: -800px;
+// 		left: -200px;
+// 	}
+// }
 
 // =============SECTION 3====================
 
 .section3 {
-	padding: 5rem 8rem 1rem 0;
+	// padding: 5rem 8rem 1rem 0;
 	display: flex;
-	flex-direction: row;
+	// flex-direction: row;
 	overflow: hidden;
-	justify-content: flex-start;
-	align-items: center;
+	// justify-content: flex-start;
+	// align-items: center;
 	z-index: 1;
 	.diagram3 {
 		position: relative;
-		left: -150px;
-		// border: 1px solid black;
+		// left: -150px;
 	}
 	.section3-content {
-		margin-left: -80px;
-		width: 500px;
-		// border: 1px solid black;
+		// margin-left: -80px;
+		// width: 500px;
+
 		h5 {
 			color: $Very-dark-blue;
 			font-size: 15px;
@@ -338,11 +338,14 @@ main {
 footer {
 	background-color: $Very-dark-black-blue;
 	border-radius: 0 80px 0 0;
+	display: flex;
+	@include flexrow();
+	padding: 4rem 8rem;
+	justify-content: space-between;
 	.footer-content {
 		display: flex;
-		@include flexrow();
-		padding: 4rem 8rem;
-		justify-content: space-around;
+		position: relative;
+		left: -70px;
 	}
 	.footer-logo {
 		color: $White;
@@ -350,15 +353,189 @@ footer {
 		font-size: 30px;
 	}
 	.content-items {
+		margin-left: 10rem;
 		p {
 			margin-bottom: 1.5rem;
 			color: $White;
 		}
-		li {
-			margin: 15px auto;
-			font-size: 13px;
+		ul {
 			cursor: pointer;
+		}
+		li {
+			margin: 25px auto;
+			font-size: 13px;
 			color: $Grayish-blue;
 		}
+	}
+}
+
+//======================RESPONSIVENESS====================
+
+@media screen and (max-width: 728px) {
+	body {
+		overflow-x: hidden;
+	}
+	header {
+		padding: 4rem 2rem;
+		display: flex;
+		flex-direction: column;
+		height: 600px;
+		overflow: hidden;
+
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			z-index: 1;
+		}
+
+		.menu-icon {
+			margin-left: 19.0005rem;
+			ion-icon {
+				font-size: 40px;
+			}
+		}
+
+		.menu-item,
+		.login,
+		.sign-up {
+			display: none;
+		}
+		.header-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+
+			h1 {
+				font-size: 40px;
+				span {
+					&::before {
+						content: "\A";
+						white-space: pre;
+					}
+				}
+			}
+			p {
+				margin-bottom: 3rem;
+				span {
+					&::before {
+						content: "\A";
+						white-space: pre;
+					}
+				}
+			}
+			.cta2 {
+				margin-bottom: 4rem;
+			}
+		}
+	}
+	// ================SECTION 1================
+	.section1 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 4rem 2rem;
+		margin-bottom: 8rem;
+
+		// border: 1px solid black;
+		h3 {
+			font-size: 19px;
+		}
+
+		.content-item {
+			width: 20rem;
+			text-align: center;
+			z-index: 2;
+		}
+		.diagram1 {
+			display: none;
+		}
+	}
+
+	// =============SECTION 2=====================
+
+	.section2 {
+		// display: grid;
+		// grid-template-columns: repeat(1fr, 1);
+		background-color: $Very-dark-gray-blue;
+		// justify-content: center;
+		align-items: center;
+		height: 800px;
+		// overflow: hidden;
+		border-radius: 0 80px 0 80px;
+		color: $White;
+		position: relative;
+		// }
+		.content2 {
+			// border: 1px black solid;
+			position: relative;
+			bottom: 2px;
+			text-align: center;
+			line-height: 2;
+			padding: 2rem 4rem;
+			z-index: 1;
+		}
+		.diagram2 {
+			position: relative;
+			left: 30px;
+			top: -150px;
+			z-index: 1;
+			// border: 1px solid black;
+		}
+		.background-image2 {
+			position: relative;
+			top: -350px;
+			left: -200px;
+		}
+	}
+	.hide-overflow {
+		overflow: hidden;
+		width: 500px;
+		height: 500px;
+		border-top-right-radius: 105px;
+		// border: 1px solid black;
+		position: absolute;
+		top: 0;
+	}
+	// =============SECTION 3==============
+
+	.section3 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		// padding: 1rem 2rem;
+		// position: relative;
+	}
+	.section3-content {
+		// border: 1px solid black;
+		display: flex;
+		padding: 2rem 4rem;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	// ===========FOOTEER==============
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.footer-logo {
+		margin-bottom: 4rem;
+	}
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+	}
+	.content-items {
+		margin-bottom: 2rem;
 	}
 }
