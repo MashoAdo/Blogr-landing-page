@@ -1,9 +1,8 @@
-const arrow = document.querySelectorAll(".arrow");
-const header = document.querySelectorAll("#nav-header");
-const list = document.querySelectorAll(".dropdown-content");
+const menuButton = document.getElementById("menu-icon");
+const menu = document.getElementById("menu");
 
 
-
-header.forEach(head => {
-    head.addEventListener("click", myFunction);
+menuButton.addEventListener('click', () =>{
+     menu.classList.toggle("show");
+   
 });
