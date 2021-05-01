@@ -134,7 +134,6 @@ header .more:hover {
 }
 
 main .section1 {
-  border: 1px solid black;
   z-index: 1;
 }
 
@@ -168,11 +167,6 @@ main .section1-content .diagram1 {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  z-index: 1;
-}
-
-.section3 .diagram3 {
-  position: relative;
 }
 
 .section3 .section3-content h5 {
@@ -183,11 +177,10 @@ main .section1-content .diagram1 {
 
 .section3 .section3-content p {
   line-height: 1.5;
-  opacity: 0.9;
 }
 
 .section3 .section3-content .content3 {
-  margin-top: 5rem;
+  margin-top: 3em;
 }
 
 footer {
@@ -375,27 +368,22 @@ footer .content-items li {
             align-items: center;
     padding: 4em 4em;
     margin-bottom: 8rem;
-    border: 1px solid black;
+    text-align: center;
   }
   .section1 .section1-content {
     margin: 2em 2em;
   }
   .section1 h5 {
     color: #1f3f5b;
-    font-size: 20px;
+    font-size: 1em;
     margin: 1em 3em;
     font-weight: 600;
-  }
-  .section1 h5 p {
-    padding: 0 3em;
-    color: blue;
   }
   .section1 h3 {
     font-size: 19px;
   }
   .section1 .content-item {
-    width: 20rem;
-    text-align: center;
+    margin-bottom: 2em;
     z-index: 2;
   }
   .section1 .diagram1 {
@@ -406,14 +394,13 @@ footer .content-items li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 800px;
     border-radius: 0 80px 0 80px;
     color: white;
     position: relative;
   }
   .section2 .content2 {
     position: relative;
-    bottom: 2px;
+    top: -90px;
     text-align: center;
     line-height: 2;
     padding: 2rem 4rem;
@@ -422,21 +409,8 @@ footer .content-items li {
   .section2 .diagram2 {
     position: relative;
     left: 30px;
-    top: -150px;
+    top: -100px;
     z-index: 1;
-  }
-  .section2 .background-image2 {
-    position: relative;
-    top: -350px;
-    left: -200px;
-  }
-  .hide-overflow {
-    overflow: hidden;
-    width: 500px;
-    height: 500px;
-    border-top-right-radius: 105px;
-    position: absolute;
-    top: 0;
   }
   .section3 {
     display: -webkit-box;
@@ -603,25 +577,102 @@ footer .content-items li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    overflow: hidden;
-    padding-top: 50px;
-  }
-  .section1 .section1-content {
-    border: 1px solid black;
+    padding-top: 4.5em;
+    z-index: 3;
   }
   .section1 .contents {
     margin: 70px auto;
     max-width: 500px;
-    border: 1px solid black;
     padding-left: 4em;
+  }
+  .section1 .contents .content-item {
+    margin: 2em auto;
   }
   .section1 .contents h5 {
     color: #1f3f5b;
     margin-bottom: 20px;
+    font-size: 1.2em;
   }
   .section1 .contents p {
     line-height: 1.5;
-    opacity: 0.9;
+  }
+  .section1 .diagram1 {
+    position: relative;
+    left: -1px;
+  }
+  .section2 {
+    background-color: #3f4164;
+    width: 100vw;
+    height: 300px;
+    border-radius: 0 80px 0 80px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    color: white;
+  }
+  .section2 .content2 {
+    margin: 70px auto;
+    z-index: 1;
+  }
+  .section2 .content2 .title {
+    margin-bottom: 1em;
+    font-size: 20px;
+  }
+  .section2 .content2 p {
+    width: auto;
+    line-height: 1.5;
+    padding: 20px;
+  }
+  .section2 .diagram2 {
+    position: relative;
+    left: 30px;
+    top: -40px;
+    z-index: 1;
+  }
+  .section2 .background-image2 {
+    position: relative;
+    top: -500px;
+  }
+  .section3 {
+    padding: 7.5em 1em 4.5em 0;
+  }
+  .section3 .diagram3 {
+    position: relative;
+    display: inline-block;
+    left: -120px;
+  }
+  .section3 .section3-content {
+    position: relative;
+    border: 1px solid black;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+  }
+  footer .footer-logo {
+    position: absolute;
+    top: 1em;
+    left: 4em;
+  }
+  footer .footer-content {
+    padding-top: 4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .footer-content .content-items {
+    margin-right: 7rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
