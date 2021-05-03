@@ -79,13 +79,6 @@ header .cta .sign-up:hover {
   background-color: #ff7a85;
 }
 
-header .background-image {
-  position: relative;
-  top: -800px;
-  left: -350px;
-  background-size: 100%;
-}
-
 header .header-content {
   margin-top: 5rem;
 }
@@ -166,7 +159,6 @@ main .section1-content .diagram1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
 }
 
 .section3 .section3-content h5 {
@@ -177,10 +169,6 @@ main .section1-content .diagram1 {
 
 .section3 .section3-content p {
   line-height: 1.5;
-}
-
-.section3 .section3-content .content3 {
-  margin-top: 3em;
 }
 
 footer {
@@ -241,8 +229,13 @@ footer .content-items li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: auto;
     overflow: hidden;
+    z-index: 1;
+  }
+  header svg {
+    position: relative;
+    width: 500px;
+    height: 50px;
   }
   header nav {
     position: relative;
@@ -253,6 +246,7 @@ footer .content-items li {
     top: 0;
     right: 0;
     cursor: pointer;
+    z-index: 1;
   }
   header .menu-icon ion-icon {
     font-size: 40px;
@@ -264,7 +258,7 @@ footer .content-items li {
     background-color: white;
     border-radius: 5px;
     margin-top: 2rem;
-    z-index: 3;
+    z-index: 1;
   }
   header .menu ul {
     display: inline-block;
@@ -274,6 +268,7 @@ footer .content-items li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    z-index: 1;
   }
   header .menu ul li {
     margin-bottom: 15px;
@@ -327,6 +322,7 @@ footer .content-items li {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 2rem auto;
+    z-index: 1;
   }
   header .menu .cta .login {
     margin: 20px auto;
@@ -351,8 +347,14 @@ footer .content-items li {
   }
   header .header-content .cta2 {
     margin-bottom: 4em;
+    z-index: 1;
   }
   .section1 {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  .section1 .section1-content {
+    margin: 2em 2em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -360,18 +362,14 @@ footer .content-items li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 4em 4em;
-    margin-bottom: 8rem;
-    text-align: center;
   }
-  .section1 .section1-content {
-    margin: 2em 2em;
+  .section1 .section1-content .content {
+    display: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 2em;
   }
   .section1 h5 {
     color: #1f3f5b;
@@ -381,6 +379,7 @@ footer .content-items li {
   }
   .section1 h3 {
     font-size: 19px;
+    margin: 100px auto 0;
   }
   .section1 .content-item {
     margin-bottom: 2em;
@@ -444,6 +443,9 @@ footer .content-items li {
             align-items: center;
     text-align: center;
   }
+  .section3-content .content {
+    margin-bottom: 2em;
+  }
 }
 
 @media screen and (min-width: 852px) {
@@ -456,6 +458,8 @@ footer .content-items li {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 4em 4em;
+    overflow: hidden;
+    height: 600px;
   }
   header nav {
     display: -webkit-box;
@@ -470,6 +474,12 @@ footer .content-items li {
   header .menu-icon {
     display: none;
   }
+  header .background-image {
+    position: relative;
+    top: -800px;
+    left: -110px;
+    background-size: 100%;
+  }
   header .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -483,6 +493,7 @@ footer .content-items li {
             justify-content: space-between;
     margin-left: 3.5em;
     font-weight: 600;
+    z-index: 1;
   }
   header .menu ul {
     display: none;
@@ -491,6 +502,7 @@ footer .content-items li {
     border-radius: 5px;
     background-color: #ffffff;
     padding: 10px;
+    z-index: 1;
   }
   header .menu ul li {
     margin-bottom: 5px;
@@ -514,6 +526,7 @@ footer .content-items li {
     position: relative;
     top: 15px;
     opacity: 0.8;
+    z-index: 1;
   }
   header .menu .item-heading ion-icon {
     position: inherit;
@@ -522,10 +535,13 @@ footer .content-items li {
   }
   header .menu .item-heading:hover {
     opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   header .menu .cta {
     position: absolute;
     right: 0;
+    z-index: 1;
   }
   header .menu .cta .login:hover {
     -webkit-transform: scale(1.2);
@@ -555,6 +571,7 @@ footer .content-items li {
         -ms-flex-align: center;
             align-items: center;
     padding: 2em;
+    z-index: 1;
   }
   header .header-content h1 {
     font-weight: 500;
@@ -580,25 +597,37 @@ footer .content-items li {
     padding-top: 4.5em;
     z-index: 3;
   }
-  .section1 .contents {
-    margin: 70px auto;
+  .section1 h3 {
+    margin-bottom: 35px;
+  }
+  .section1 .section1-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .section1 .section1-content img {
+    position: absolute;
+  }
+  .section1 .content {
+    margin: 70px 2em;
     max-width: 500px;
-    padding-left: 4em;
   }
-  .section1 .contents .content-item {
-    margin: 2em auto;
+  .section1 .content .content-item {
+    margin: 2em 0;
+    position: relative;
+    left: -100px;
   }
-  .section1 .contents h5 {
+  .section1 .content h5 {
     color: #1f3f5b;
     margin-bottom: 20px;
     font-size: 1.2em;
   }
-  .section1 .contents p {
+  .section1 .content p {
     line-height: 1.5;
-  }
-  .section1 .diagram1 {
-    position: relative;
-    left: -1px;
   }
   .section2 {
     background-color: #3f4164;
@@ -637,14 +666,17 @@ footer .content-items li {
   .section3 {
     padding: 7.5em 1em 4.5em 0;
   }
-  .section3 .diagram3 {
+  .section3 img {
     position: relative;
     display: inline-block;
-    left: -120px;
+    left: -150px;
   }
   .section3 .section3-content {
     position: relative;
-    border: 1px solid black;
+    width: 500px;
+  }
+  .section3 .section3-content .content {
+    margin-bottom: 2em;
   }
   footer {
     display: -webkit-box;
@@ -670,9 +702,18 @@ footer .content-items li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    position: relative;
+    left: 200px;
   }
   footer .footer-content .content-items {
-    margin-right: 7rem;
+    margin-right: 100px;
+  }
+}
+
+@media screen and (min-width: 852px) and (min-width: 1000px) {
+  .section1-content .content-item {
+    position: relative;
+    left: -300px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
